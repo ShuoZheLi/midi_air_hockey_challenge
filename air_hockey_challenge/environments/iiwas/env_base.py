@@ -45,7 +45,7 @@ class AirHockeyBase(MuJoCo):
         collision_spec = [("puck", ["puck"]),
                           ("rim", ["rim_home_l", "rim_home_r", "rim_away_l", "rim_away_r", "rim_left", "rim_right"]),
                           ("rim_short_sides", ["rim_home_l", "rim_home_r", "rim_away_l", "rim_away_r"])]
-
+        print("self.n_agents: ",self.n_agents)
         if 1 <= self.n_agents <= 2:
             scene = os.path.join(os.path.dirname(os.path.abspath(env_path)), "single.xml")
 
